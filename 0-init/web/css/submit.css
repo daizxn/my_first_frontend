@@ -1,1 +1,17 @@
 /* 表单页CSS文件 */
+header {
+    /* 子元素可继承属性 */
+    color: #fff;
+    text-align: center;
+    padding-top: 175px;
+    box-sizing: border-box;
+}
+
+header h2 {
+    font-size: 60px;
+}
+
+header h1 {
+    margin-top: 20px;
+    font-size: 50px;
+}

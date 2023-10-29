@@ -14,7 +14,6 @@ html {
 }
 
 body {
-    /* #ffffff可缩写为#fff */
     background-color: #fff;
     min-height: 100vh;
     display: flex;
@@ -25,8 +24,14 @@ body {
 /* 页面主体结构 */
 
 header {
-    height: 470px;
+    /* position: fixed; */
+    height: 460px;
     background: #1677FF;
+}
+
+header h2 {
+    font-size: 16px;
+
 }
 
 main {
@@ -43,13 +48,16 @@ main {
 
 nav {
     /* 导航栏悬浮在其他元素上层，采用绝对定位 */
+    background: #1677FF;
     position: fixed;
     padding: 0 80px;
     left: 0;
     right: 0;
-    top: 40px;
+    top: 40;
     display: flex;
     align-items: center;
+    /* width:auto;
+    height:auto; */
 }
 
 nav .logo {
@@ -58,11 +66,12 @@ nav .logo {
 }
 
 nav .logo img {
+    /* left:0; */
     width: 150px;
     height: 36px;
 }
 
-nav a {
+nav .nav-item a {
     color: #fff;
     font-size: 16px;
     font-family: Helvetica;

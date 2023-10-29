@@ -6,38 +6,34 @@
     <meta charset="utf-8" />
     <title>蚂蚁前端课堂</title>
     <link rel="icon" href="favicon.ico" />
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/submit.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- 导航 -->
     <nav>
-        <div>
-            <div>
-                <a href="https://campus.antifin.com" target="_blank">
-                    <img src="./imgs/logo.png">
-                </a>
-            </div>
-            <div>
-                <a href="./index.html">
-                    首页
-                </a>
-            </div>
+        <div class="logo">
+            <a href="https://campus.antifin.com" target="_blank">
+                <img src="./imgs/logo.png">
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="./index.html">
+                首页
+            </a>
             <!-- #gallary 页内锚点 -->
-            <div>
-                <a href="./index.html#gallary">
-                    画廊
-                </a>
-            </div>
-            <div>
-                <a href="./index.html#about">
-                    关于
-                </a>
-            </div>
-            <div>
-                <a href="https://www.baidu.com" target="_blank">
-                    <img src="./imgs/search.png">
-                </a>
-            </div>
+            <a href="./index.html#gallary">
+                画廊
+            </a>
+            <a href="./index.html#about">
+                关于
+            </a>
+        </div>
+        <div class="search">
+            <a href="https://www.bing.com/search?q=%E5%89%8D%E7%AB%AF" target= _blank">
+                <img src="./imgs/search.png" alt="搜索">
+            </a>
         </div>
     </nav>
     <header>
@@ -47,12 +43,12 @@
         <section>
             <div>
                 <!-- 文件 -->
-                <input id="upload" type="file" accept=".png, .jpg, .jpeg" />
+                <input id="upload" type="file" accept=".png, .jpg, .jpeg" >
             </div>
             <div>
                 <!-- 输入内容 -->
-                <input id="name" type="tsxt" placeholder="名称"/>
-                <input id="photographer" type="text" placeholder="拍摄者"/>
+                <input id="name" type="tsxt" placeholder="名称" />
+                <input id="photographer" type="text" placeholder="拍摄者" />
                 <textarea id="desc" rows="3" type="text" placeholder="描述"></textarea>
             </div>
         </section>
@@ -74,9 +70,10 @@
         </div>
         <div>
             <a href="https://xcloud.alipay.com" target="_blank">
-                <img src="./imgs/afx-logo.png"/>
+                <img src="./imgs/afx-logo.png" />
             </a>
         </div>
     </footer>
 </body>
+
 </html>
