@@ -9,7 +9,74 @@
 </head>
 
 <body>
-    欢迎来到蚂蚁前端课堂，你将开启奇妙的前端之旅。
+    <!-- 导航 -->
+    <nav>
+        <div>
+            <div>
+                <a href="https://campus.antifin.com" target="_blank">
+                    <img src="./imgs/logo.png">
+                </a>
+            </div>
+            <div>
+                <a href="./index.html">
+                    首页
+                </a>
+            </div>
+            <!-- #gallary 页内锚点 -->
+            <div>
+                <a href="./index.html#gallary">
+                    画廊
+                </a>
+            </div>
+            <div>
+                <a href="./index.html#about">
+                    关于
+                </a>
+            </div>
+            <div>
+                <a href="https://www.baidu.com" target="_blank">
+                    <img src="./imgs/search.png">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h2>记录眼中的美好</h2>
+    </header>
+    <main>
+        <section>
+            <div>
+                <!-- 文件 -->
+                <input id="upload" type="file" accept=".png, .jpg, .jpeg" />
+            </div>
+            <div>
+                <!-- 输入内容 -->
+                <input id="name" type="tsxt" placeholder="名称"/>
+                <input id="photographer" type="text" placeholder="拍摄者"/>
+                <textarea id="desc" rows="3" type="text" placeholder="描述"></textarea>
+            </div>
+        </section>
+        <section>
+            <button>发布</button>
+        </section>
+        <!-- <section>
+            <form action="">
+                <input type="tsxt" placeholder="名称"/>
+                <input type="text" placeholder="拍摄者"/>
+                <textarea rows="3" type="text" placeholder="描述"></textarea>
+                <input type="submit" value="提交">
+            </form>
+        </section> -->
+    </main>
+    <footer>
+        <div>
+            <span>Copyright © 2023 支付宝前端</span>
+        </div>
+        <div>
+            <a href="https://xcloud.alipay.com" target="_blank">
+                <img src="./imgs/afx-logo.png"/>
+            </a>
+        </div>
+    </footer>
 </body>
-
 </html>
