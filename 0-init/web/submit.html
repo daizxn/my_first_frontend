@@ -19,16 +19,10 @@
             </a>
         </div>
         <div class="nav-item">
-            <a href="./index.html">
-                首页
-            </a>
-            <!-- #gallary 页内锚点 -->
-            <a href="./index.html#gallary">
-                画廊
-            </a>
-            <a href="./index.html#about">
-                关于
-            </a>
+            <a href="./index.html">首页</a>
+            <a href="./index.html#gallary">画廊</a>
+            <a href="./index.html#about">关于</a>
+            <a href="./submit.html">上传</a>
         </div>
         <div class="search">
             <a href="https://www.bing.com/search?q=%E5%89%8D%E7%AB%AF" target= _blank">
@@ -37,22 +31,25 @@
         </div>
     </nav>
     <header>
-        <h2>记录眼中的美好</h2>
+        <h1>记录眼中的美好</h1>
     </header>
     <main>
-        <section>
-            <div>
+        <section class="form">
+            <div class="file">
                 <!-- 文件 -->
+                <label for="upload">
+                    <img src="./imgs/upload.png">
+                </label>
                 <input id="upload" type="file" accept=".png, .jpg, .jpeg" >
             </div>
-            <div>
+            <div class="input">
                 <!-- 输入内容 -->
-                <input id="name" type="tsxt" placeholder="名称" />
+                <input id="name" type="text" placeholder="名称" />
                 <input id="photographer" type="text" placeholder="拍摄者" />
-                <textarea id="desc" rows="3" type="text" placeholder="描述"></textarea>
+                <textarea id="desc"  type="text" placeholder="描述"></textarea>
             </div>
         </section>
-        <section>
+        <section class="button">
             <button>发布</button>
         </section>
         <!-- <section>
