@@ -52,7 +52,7 @@ async function uploadFile() {
 
     console.log('开始上传', { fileObj, name, photographer, desc });
     try {
-        const response = await fetch('/data/pic/upload', {
+        const response = await fetch('/pic/upload', {
             method: 'POST',
             body: form
         });

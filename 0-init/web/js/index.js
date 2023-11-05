@@ -26,7 +26,7 @@ function appendPic(item) {
 async function fetchPics() {
     try {
         // TODO: 正式接口为/pic/list，暂时用/data/data-test.json测试验证
-        const response = await fetch('/data/data.json', { method: "GET" });
+        const response = await fetch('/pic/list', { method: "GET" });
         console.log('返回状态', response.status);
         const result = await response.json();
         result.data.forEach(item => {

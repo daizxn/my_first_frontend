@@ -8,8 +8,23 @@ const app=new express();
 app.use(express.static('web'));
 
 app.post('/pic/upload',(req,res)=>{
-    const form=formtable()
-})
+    const form = formidable({
+        multiples: true,
+        keepExtensions: true,
+        uploadDir: path.join(__dirname,'web/data/pic'),
+        filenname:(name,ext)=>{
+            return `${name}-${Data.now()}${ext}`
+        }
+    });
+    form.parse(req,(err,fields,files)=>{
+        if(err){
+            res.json({success:false});
+            return;
+        }
+        console.log('upload',fields,files);
+        res.json({success:true});
+    });
+});
 
 app.get('/pic/list',(req,res)=>{
     const filePath=path.join(__dirname,'web/data/data.json');
