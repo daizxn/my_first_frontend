@@ -8,26 +8,21 @@ function handlePreview() {
     const previewEl = $('#preview'); // 图片预览
     uploadEl.addEventListener('change', function() {
         console.log('选择文件', uploadEl.files[0]);
-
         const reader = new FileReader();
-        // 监听load事件
         reader.addEventListener('load', function() {
             console.log('显示图片');
             previewEl.src = reader.result; // 图片base64
         });
-        // 读取文件，读取f完成后会触发load事件
-        // @see https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader/readAsDataURL
         reader.readAsDataURL(uploadEl.files[0]);
     });
 }
 handlePreview();
-//图片上传
+
 async function uploadFile() {
-    // 1. 处理输入数据
     const name = $("#name").value.trim();
     const photographer = $("#photographer").value.trim();
     const desc = $("#desc").value.trim();
-    const fileObj = $("#upload").files[0]; // js 获取文件对象
+    const fileObj = $("#upload").files[0];
     if (!fileObj) {
         alert('请选择图片');
         return;
@@ -42,22 +37,22 @@ async function uploadFile() {
         alert('请输入拍摄者');
         return;
     }
+
     if (!desc) {
         alert('请输入描述信息');
         return;
     }
 
-    // 2. 构建FormData
-    const form = new FormData(); // FormData 对象
-    form.append("file", fileObj); // 文件对象
+
+    const form = new FormData(); 
+    form.append("file", fileObj);
     form.append("name", name);
     form.append("photographer", photographer);
     form.append("desc", desc);
 
-    // 3. 提交FormData
     console.log('开始上传', { fileObj, name, photographer, desc });
     try {
-        const response = await fetch('/pic/upload', {
+        const response = await fetch('/data/pic/upload', {
             method: 'POST',
             body: form
         });
