@@ -8,6 +8,7 @@
     "mime-types": "^2.1.34"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "formidable": "^3.5.1"
   }
 }

@@ -1,6 +1,7 @@
-'use strict';
-
 const http = require('http');
+const path = require('path');
+const fs = require('fs');
+const mime = require('mime-types');
 
 // 端口号
 const port = 3000;
